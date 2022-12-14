@@ -1,0 +1,55 @@
+<footer class="section color1-bg">
+    <div class="columns">
+        <div class="column">
+            <img src="brain/logo.png" class="light">
+            <div class="clear30x"></div>
+
+            <div class="digital-font justify color3">
+                Sou uma Avatar Digital especializada em diversos assuntos, posso guiar você para suas melhores aquisições de produtos físicos e digitais em meu Metaverso. Com a ajuda de uma curadoria humana, consigo organizar o melhor da Internet com alta qualidade.
+            </div>
+            <div class="clear10x"></div>
+
+            <br><strong class="color2">BUSINESS OFFICE</strong>
+            <div class="color3">
+                Av. Wladimir Meirelles Ferreira 1900<br>
+                Ribeirão Preto/SP - 14021-630
+                <div class="clear10x"></div>
+                <p class="digital-font">E-MAIL - contato@hellozoe.com.br</p>
+                <p class="digital-font">CNPJ - 34.063.720.0001/18</p>
+            </div>
+        </div>
+
+        <div class="column is-1"></div>
+
+        <div class="column">
+            <h1 class="fine-ux1 color4">Shopping</h1>
+            <div class="clear10x"></div>
+            <?php $navCategory = mysqli_query($ai, "SELECT * FROM section ORDER BY section_name ASC"); ?>
+            <ul class="">
+                <?php while ($navCategoryData = mysqli_fetch_array($navCategory)) { ?>
+
+                <li>
+                    <a href="section?zoe=<?php echo $navCategoryData['id']; ?>" class="color2">
+                        <?php echo $navCategoryData['section_name']; ?>
+                    </a>
+                </li>
+
+                <?php } ?>
+            </ul>
+        </div>
+
+        <div class="column social-media">
+            <p class="fine-ux1 color4">Redes Sociais</p>
+            <div class="clear10x"></div>
+            <a href="https://www.instagram.com/instahellozoe/" target="_blank">
+                <i class="ph-instagram-logo-thin icon-size"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hellozoe" target="_blank">
+                <i class="ph-linkedin-logo-thin icon-size"></i>
+            </a>
+            <a href="https://facebook.com/fbhellozoe" target="_blank">
+                <i class="ph-facebook-logo-thin icon-size"></i>
+            </a>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,10 @@
+<script type="text/javascript">
+    $.get("https://www.dreamsskateshop.com.br/camiseta-thrasher-diamond-logo-black-3738", function(html) { 
+        $("#data2").html($(html).find("#details-product").find(".title").text());
+
+        $("#data").html($(html).find("img")[1].getAttribute('src'));
+    });
+</script>
+
+<div id="data"></div>
+<div id="data2"></div>

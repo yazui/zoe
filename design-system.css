@@ -1,0 +1,112 @@
+/* ........................................... */
+/* ........................................... */
+/* .......... design system .................. */
+/* ........................................... */
+/* ........................................... */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap');
+
+a{ text-decoration: none; }
+
+:root {
+    --color1: #000000;
+    --color2: #B9B9B9;
+    --color3: #94A6B4;
+    --color4: #DAD2C5;
+    --color5: #724FD6;
+}
+::selection {      background: aqua }
+::-moz-selection { background: aqua }
+
+.color1{ color: var(--color1) !important; }
+.color2{ color: var(--color2) !important; }
+.color3{ color: var(--color3) !important; }
+.color4{ color: var(--color4) !important; }
+.color5{ color: var(--color5) !important; }
+
+.color1-bg{ background-color: var(--color1) !important; }
+.color2-bg{ background-color: var(--color2) !important; }
+.color3-bg{ background-color: var(--color3) !important; }
+.color4-bg{ background-color: var(--color4) !important; }
+.color5-bg{ background-color: var(--color5) !important; }
+
+
+/* .............................................................. 
+.................................................................
+
+text 
+
+.................................................................
+.............................................................. */
+
+.digital-font{ font-size: 10px; text-transform: uppercase !important; }
+.body-text{ font-size: 14px; }
+.text-ux1{ 
+    font-size: 28px; 
+    line-height: 1;
+    font-family: 'Montserrat' !important;
+}
+.text-ux2{ 
+    font-size: 22px !important; 
+    line-height: 1 !important;
+    font-family: 'Montserrat' !important;
+}
+.fine-ux1{ 
+    font-size: 28px !important; 
+    font-weight: 300; 
+    line-height: 1; 
+    font-family: 'Montserrat' !important;
+}
+.fine-ux2{ font-size: 20px !important; 
+    font-weight: 300; 
+    line-height: 1.2; 
+    font-family: 'Montserrat' !important;
+}
+.text-up{ 
+    text-transform: uppercase !important; 
+}
+
+/* .............................................................. 
+.................................................................
+
+spaces & align  
+
+.................................................................
+.............................................................. */
+
+.clear10x{  height: 10px; }
+.clear30x{  height: 30px; }
+.clear60x{  height: 60px; }
+.clear100x{ height: 100px; }
+.justify{ text-align: justify; }
+.supericon{ font-size: 100px; }
+
+/* .............................................................. 
+.................................................................
+
+motion 
+
+.................................................................
+.............................................................. */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* .............................................................. 
+.................................................................
+
+image  
+
+.................................................................
+.............................................................. */
+
+.light{
+    filter: brightness(100) !important;
+}

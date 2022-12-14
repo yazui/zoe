@@ -1,0 +1,179 @@
+.nav-home{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    color: var(--color4);
+    background-color: var(--color3);
+    right: 71px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200 !important;
+    padding-top: 20px;
+    z-index: 98;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+}
+.nav-home:hover{
+    color: var(--color3);
+    background-color: var(--color4);
+}
+.nav-menu{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    color: var(--color4);
+    background-color: var(--color3);
+    right: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200 !important;
+    padding-top: 20px;
+    z-index: 98;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+}
+.nav-menu:hover{
+    color: var(--color3);
+    background-color: var(--color4);
+}
+.nav-screen{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--color3), #4b5963);
+    position: fixed;
+    z-index: 99;
+    display: none;
+    padding: 40px;
+    overflow-y: scroll;
+}
+.nav-screen-close{
+    font-size: 40px;
+    top: 36px;
+    left: 210px;
+    padding-right: 40px;
+    color: var(--color4);
+    position: fixed;
+    font-weight: 100;
+}
+.nav-screen-close:hover{
+    opacity: .2;
+}
+
+.best{
+    position: absolute;
+    color: var(--color4);
+    letter-spacing: 15px !important;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1;
+}
+.nav-section{
+    color: var(--color4);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    left: 200px;
+    display: none;
+    letter-spacing: 6px;
+}
+.nav-section-div{
+    width: 1px;
+    height: 1px;
+    background-color: var(--color4);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nav-section-loop{
+    opacity: 0;
+    top: 190px;
+}
+.nav-links li a{
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 12px;
+    -webkit-transition: color .5s ease-out;
+    -moz-transition: color .5s ease-out;
+    -o-transition: color .5s ease-out;
+    transition: color .5s ease-out;
+}
+.nav-links li a:hover{
+    text-decoration: underline;
+    color: burlywood;
+}
+@media (orientation: portrait) {
+    .nav-home{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        color: var(--color4);
+        background-color: var(--color3);
+        right: 51px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 200 !important;
+        padding-top: 14px;
+    }
+    .nav-menu{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        color: var(--color4);
+        background-color: var(--color3);
+        right: 0;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 200 !important;
+        padding-top: 14px;
+    }
+    .nav-screen{
+        overflow-y: scroll;
+        padding: 10px;
+    }
+    .nav-screen-close{
+        font-size: 40px;
+        top: 29px;
+        left: 250px;
+        padding-right: 40px;
+        color: var(--color4);
+        position: fixed;
+        font-weight: 100;
+    }
+}
+footer .social-media a i{
+    font-size: 40px;
+    color: var(--color2);
+    -webkit-transition: color .5s ease-out;
+    -moz-transition: color .5s ease-out;
+    -o-transition: color .5s ease-out;
+    transition: color .5s ease-out;
+}
+footer .social-media a i:hover{
+    color: var(--color4);
+}
+
+.metaverse{
+    width: 100%;
+    height: 100%;
+}
+.metaverse-hello{
+    position: absolute;
+    text-align: center;
+    z-index: 90;
+    width: 100%;
+    top: 40%;
+    font-size: 60px;
+    color: var(--color4);
+    font-weight: 200;
+}
+@media (orientation: portrait) {
+    .metaverse-hello{
+        top: 60px;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,77 @@
+<!-- ...................................................................... 
+...........................................................................
+
+navigation buttons
+
+...........................................................................
+....................................................................... -->
+
+<div class="">
+    <a class="nav-home" href="index"><i class="ph-house"></i></a>
+    <a class="nav-menu" onclick="nav();"><i class="ph-dots-nine"></i></a>  
+</div>
+
+
+<!-- ...................................................................... 
+...........................................................................
+
+navigation screen
+
+...........................................................................
+....................................................................... -->
+
+<div class="nav-screen">
+    <a onclick="closeNav();">
+        <div class="nav-screen-close"><i class="ph-x"></i></div>
+    </a>
+
+    <h1 class="best">menu</h1>
+    <div class="clear100x"></div>
+    <div class="columns">
+
+        <div class="column">
+            <h1 class="nav-section">SHOPPING</h1>
+            <div class="nav-section-div"></div>
+
+            <div class="nav-section-loop">
+                <?php $navCategory = mysqli_query($ai, "SELECT * FROM section ORDER BY section_name ASC"); ?>
+                <ul class="nav-links">
+                    <?php while ($navCategoryData = mysqli_fetch_array($navCategory)) { ?>
+
+                    <li><a href="section?zoe=<?php echo $navCategoryData['id']; ?>"><?php echo $navCategoryData['section_name']; ?></a></li>
+
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+
+        <div class="column">
+            <h1 class="nav-section">produtos em alta</h1>
+            <div class="nav-section-div"></div>
+
+            <div class="nav-section-loop">
+                <?php $navProductViews = mysqli_query($ai, "SELECT * FROM spy ORDER BY views DESC LIMIT 10"); ?>
+                <ul class="nav-links">
+                    <?php while ($navProductViewsData = mysqli_fetch_array($navProductViews)) { ?>
+
+                    <li><a href="<?php echo $navProductViewsData['seo_url']; ?>"><?php echo $navProductViewsData['title']; ?></a></li>
+
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="column">
+            <h1 class="nav-section">site map</h1>
+            <div class="nav-section-div"></div>
+
+            <div class="nav-section-loop">
+                <ul class="nav-links">
+                    <li><a href="index">página inicial</a></li>
+                    <li>&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
