@@ -292,6 +292,11 @@ container
 }
 .container-thumb{
     border: 1px dotted black;
+    width: 100%;
+    height: 230px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .container-client{
     text-align: center;
