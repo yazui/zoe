@@ -221,6 +221,18 @@ footer
 .................................................................
 .............................................................. */
 
+footer .shopping a{
+    font-size: 20px;
+    color: var(--color3);
+    -webkit-transition: color .5s ease-out;
+    -moz-transition: color .5s ease-out;
+    -o-transition: color .5s ease-out;
+    transition: color .5s ease-out;
+}
+footer .shopping a:hover{
+    color: var(--color2);
+    text-decoration: underline;
+}
 footer .social-media a i{
     font-size: 40px;
     color: var(--color2);
@@ -278,8 +290,12 @@ container
     padding: 10px;
     margin-bottom: 40px;
 }
-.container-box li img{
+.container-thumb{
     border: 1px dotted black;
+}
+.container-client{
+    text-align: center;
+    margin-top: 20px;
 }
 .container-title{
     height: 120px;

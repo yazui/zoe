@@ -21,20 +21,11 @@
 
         <div class="column is-1"></div>
 
-        <div class="column">
+        <div class="column shopping">
             <h1 class="fine-ux1 color4">Shopping</h1>
             <div class="clear10x"></div>
-            <?php $navCategory = mysqli_query($ai, "SELECT * FROM section ORDER BY section_name ASC"); ?>
             <ul class="">
-                <?php while ($navCategoryData = mysqli_fetch_array($navCategory)) { ?>
-
-                <li>
-                    <a href="section?zoe=<?php echo $navCategoryData['id']; ?>" class="color2">
-                        <?php echo $navCategoryData['section_name']; ?>
-                    </a>
-                </li>
-
-                <?php } ?>
+                <div import="brain/shopping-links.html"></div>
             </ul>
         </div>
 

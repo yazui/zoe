@@ -34,13 +34,8 @@ navigation screen
             <div class="nav-section-div"></div>
 
             <div class="nav-section-loop">
-                <?php $navCategory = mysqli_query($ai, "SELECT * FROM section ORDER BY section_name ASC"); ?>
                 <ul class="nav-links">
-                    <?php while ($navCategoryData = mysqli_fetch_array($navCategory)) { ?>
-
-                    <li><a href="section?zoe=<?php echo $navCategoryData['id']; ?>"><?php echo $navCategoryData['section_name']; ?></a></li>
-
-                    <?php } ?>
+                    <div import="brain/shopping-links.html"></div>
                 </ul>
             </div>
         </div>

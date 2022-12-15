@@ -39,8 +39,18 @@ text
 .................................................................
 .............................................................. */
 
-.digital-font{ font-size: 10px; text-transform: uppercase !important; }
 .body-text{ font-size: 14px; }
+.heading{
+    font-family: 'Montserrat';
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -2px;
+    font-weight: 300;
+}
+.digital-font{ 
+    font-size: 10px; 
+    text-transform: uppercase !important; 
+}
 .text-ux1{ 
     font-size: 28px; 
     line-height: 1;
