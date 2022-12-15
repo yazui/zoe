@@ -2,6 +2,7 @@
 const myTimeout = setTimeout(myGreeting, 2000);
 function myGreeting() {
     $(".load").fadeOut();
+    $("#content").fadeIn();
 }
 
 // include

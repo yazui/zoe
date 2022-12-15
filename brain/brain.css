@@ -5,7 +5,9 @@ load
 
 .................................................................
 .............................................................. */
-
+#content{
+    display: none;
+}
 .load{
     background-color: var(--color2);
     position: fixed;
@@ -51,6 +53,10 @@ bulma fix
     font-size: 10px;
     padding: 20px;
     width: 100%;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
 }
 .button:hover{
     background-color: var(--color4);
@@ -297,6 +303,15 @@ container
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-transition: scale .1s ease-out;
+    -moz-transition: scale .1s ease-out;
+    -o-transition: scale .1s ease-out;
+    transition: scale .1s ease-out;
+}
+.container-thumb:hover{
+    border: 0;
+    scale: 1.2;
+    box-shadow: 0px 50px 80px -30px rgba(151, 109, 0, 1) !important;
 }
 .container-client{
     text-align: center;
@@ -326,5 +341,11 @@ container
         padding: 10px;
         font-size: 12px;
         text-transform: uppercase;
+    }
+    .container-thumb{
+        height: 150px;
+    }
+    .container-price{
+        font-size: 16px;
     }
 }

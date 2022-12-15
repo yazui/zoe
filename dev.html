@@ -69,43 +69,12 @@
 
         <!-- ................................................... -->
 
-        <!-- metaverse -->
-        <section id="content">
-            <div class="metaverse">
-                <div class="metaverse-hello">
-                    Olá, meu nome é ZOE                
+        <!-- content -->
+        <section class="hero is-fullheight is-black" id="content">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1 fine-ux1">Hello World</h1>
                 </div>
-                <video src="memory/zoe-intro.mp4" autoplay muted loop playsinline></video>
-            </div>
-
-            <div class="has-text-centered">
-                <div class="clear60x"></div>
-                <i class="ph-flying-saucer-thin supericon color3"></i>
-                <div class="text-ux1 color3">Minha curadoria Extraespecial</div>
-                <div class="fine-ux2">
-                    <div class="clear10x"></div>
-                    Os melhores produtos para você de forma rápida, fácil e divertida.
-                    <br>Além disso, ofereço descontos exclusivos em parceria<br>com as melhores lojas da internet.</div>
-            </div>
-
-            <script>
-                $.get('memory/extra.xml', function(xmlDoc){
-                    var $xml = $(xmlDoc);
-                    $xml.find('offer').each(function(){
-                        var skuTv    = $(this).find('sku').text();
-                        var titleTv  = $(this).find('offerName').text();
-                        var linkTv   = $(this).find('offerLink').text();
-                        var thumbTv  = $(this).find('offerThumbnail').text();
-                        var priceTv  = $(this).find('priceTo').text();
-                        var clientTv = $(this).find('sellerThumbnail').text();
-
-                        $("#container-tv").append("<li><a data-fancybox href='" + thumbTv + "'><style>.container-thumb" + skuTv + "{ background-image:url("+ thumbTv +"); }</style><div class='container-thumb" + skuTv + " container-thumb'></div></a><p class='container-title'>" + titleTv + "</p><p class='container-price'>R$ " + priceTv + "</p><hr><a class='button' href='" + linkTv + "' target='_blank'>saiba mais</a> <div class='container-client'><p class='digital-font'>vendido e entregue por</p><img src='"+ clientTv +"'/></div></li>");
-                    });
-                },'xml')
-            </script>
-
-            <div class="section">
-                <ul class="container-box" id="container-tv"></ul>
             </div>
         </section>
 
