@@ -1,4 +1,10 @@
-// navigation
+// load
+const myTimeout = setTimeout(myGreeting, 2000);
+function myGreeting() {
+    $(".load").fadeOut();
+}
+
+// include
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");
@@ -40,3 +46,5 @@ function closeNav(){
     $(".nav-section-div").animate({width: '1px'}, 400);
     $(".nav-section-loop").animate({opacity: '0', top: '190'}, 300);
 }
+
+// fancybox
