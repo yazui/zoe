@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- title & configs -->
-        <title>Z O Ξ</title>
+        <title>Z O Ξ - Smart Tv</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -71,38 +71,33 @@
 
         <!-- ................................................... -->
 
-        <!-- metaverse -->
+        <!-- content -->
         <section id="content">
-            <div class="metaverse">
-                <div class="metaverse-hello" id="app"></div>
-                <video src="memory/zoe-intro.mp4" autoplay muted loop playsinline></video>
-                <a class="metaverse-go" onclick="goNews();">
-                    <i class="ph-arrow-circle-down-light"></i>
-                </a>
+            <div class="logo">
+                <img src="brain/logo.png">
             </div>
-
             <div class="has-text-centered" id="news">
-                <div class="clear60x"></div>
-                <i class="ph-flying-saucer-thin supericon color3"></i>
-                <div class="text-ux1 color3" id="str">Minha curadoria Extraespecial</div>
+                <i class="ph-monitor-light supericon color3"></i>
+                <div class="text-ux1 color3">Smart Tv's</div>
                 <div class="fine-ux2">
                     <div class="clear10x"></div>
-                    Os melhores produtos para você de forma rápida, fácil e divertida.
-                    <br>Além disso, ofereço descontos exclusivos em parceria<br>com as melhores lojas da internet.</div>
+                    Você quer assistir televisão em qualidade HD sem pagar uma fortuna por isso? 
+                    <br>Olha o que eu separei para você
+                </div>
             </div>
 
             <script>
-                $.get('memory/news.xml', function(xmlDoc){
+                $.get('memory/smart-tv.xml', function(xmlDoc){
                     var $xml = $(xmlDoc);
                      $xml.find('offer').shuffle().each(function(){
-                        var skuTv    = $(this).find('sku').text();
-                        var titleTv  = $(this).find('offerName').text();
-                        var linkTv   = $(this).find('offerLink').text();
-                        var thumbTv  = $(this).find('offerThumbnail').text();
-                        var priceTv  = $(this).find('priceTo').text();
-                        var clientTv = $(this).find('sellerThumbnail').text();
+                        var sku    = $(this).find('sku').text();
+                        var title  = $(this).find('offerName').text();
+                        var link   = $(this).find('offerLink').text();
+                        var thumb  = $(this).find('offerThumbnail').text();
+                        var price  = $(this).find('priceTo').text();
+                        var client = $(this).find('sellerThumbnail').text();
 
-                        $("#container-tv").append("<li><a data-fancybox href='" + thumbTv + "'><style>.container-thumb" + skuTv + "{ background-image:url("+ thumbTv +"); }</style><div class='container-thumb" + skuTv + " container-thumb'></div></a><p class='container-title'>" + titleTv + "</p><p class='container-price'>R$ " + priceTv + "</p><hr><a class='button' href='" + linkTv + "' target='_blank'>saiba mais</a> <div class='container-client'><p class='digital-font'>vendido e entregue por</p><img src='"+ clientTv +"'/></div></li>");
+                        $("#container-tv").append("<li><a data-fancybox href='" + thumb + "'><style>.container-thumb" + sku + "{ background-image:url("+ thumb +"); }</style><div class='container-thumb" + sku + " container-thumb'></div></a><p class='container-title'>" + title + "</p><p class='container-price'>R$ " + price + "</p><hr><a class='button' href='" + link + "' target='_blank'>saiba mais</a> <div class='container-client'><p class='digital-font'>vendido e entregue por</p><img src='"+ client +"'/></div></li>");
                     });
                 },'xml')
             </script>

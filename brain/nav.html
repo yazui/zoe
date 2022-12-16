@@ -41,23 +41,6 @@ navigation screen
         </div>
 
         <div class="column">
-            <h1 class="nav-section">produtos em alta</h1>
-            <div class="nav-section-div"></div>
-
-            <div class="nav-section-loop">
-                <?php $navProductViews = mysqli_query($ai, "SELECT * FROM spy ORDER BY views DESC LIMIT 10"); ?>
-                <ul class="nav-links">
-                    <?php while ($navProductViewsData = mysqli_fetch_array($navProductViews)) { ?>
-
-                    <li><a href="<?php echo $navProductViewsData['seo_url']; ?>"><?php echo $navProductViewsData['title']; ?></a></li>
-
-                    <?php } ?>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="column">
             <h1 class="nav-section">site map</h1>
             <div class="nav-section-div"></div>
 

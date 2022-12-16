@@ -1,5 +1,12 @@
+//scrollto
+var scrollTo = function(identifier, speed) {
+    $('html, body').animate({
+        scrollTop: $(identifier).offset().top
+    }, speed || 800);
+}
+
 // load
-const myTimeout = setTimeout(myGreeting, 2000);
+const myTimeout = setTimeout(myGreeting, 1000);
 function myGreeting() {
     $(".load").fadeOut();
     $("#content").fadeIn();
@@ -29,6 +36,41 @@ function includeHTML() {
     }
 }
 
+// random 
+(function($) {
+    $.fn.shuffle = function() {
+        // credits: http://bost.ocks.org/mike/shuffle/
+        var m = this.length, t, i;
+
+        while (m) {
+            i = Math.floor(Math.random() * m--);
+
+            t = this[m];
+            this[m] = this[i];
+            this[i] = t;
+        }
+
+        return this;
+    };
+}(jQuery));
+
+// index typo motion
+var app = document.getElementById('app');
+var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 75,
+});
+
+typewriter.typeString('Hello, meu nome é ZOE')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('Sou uma Assistente Virtual')
+    .pauseFor(2500)
+    .deleteChars(18)
+    .typeString('<strong>Inteligência Artificial</strong>')
+    .pauseFor(2500)
+    .start();
+
 // navigation
 function nav(){
     $(".nav-screen").slideDown();
@@ -48,4 +90,7 @@ function closeNav(){
     $(".nav-section-loop").animate({opacity: '0', top: '190'}, 300);
 }
 
-// fancybox
+// news
+function goNews(){
+    scrollTo("#news");
+}

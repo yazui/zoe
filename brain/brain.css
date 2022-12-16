@@ -70,7 +70,10 @@ nav
 
 .................................................................
 .............................................................. */
-
+.logo{
+    padding-left: 60px;
+    padding-top: 25px
+}
 .nav-home{
     position: fixed;
     width: 70px;
@@ -268,10 +271,34 @@ metaverse
     text-align: center;
     z-index: 90;
     width: 100%;
-    top: 40%;
+    bottom: 100px;
     font-size: 60px;
     color: var(--color4);
     font-weight: 200;
+}
+.metaverse-hello strong{
+    color: var(--color3);
+}
+.metaverse-go{
+    position: absolute;
+    right: 50px;
+    z-index: 90;
+    bottom: 20px;
+    font-size: 60px;
+    color: var(--color4);
+    font-weight: 200;
+    -webkit-transition: color .5s ease-out;
+    -moz-transition: color .5s ease-out;
+    -o-transition: color .5s ease-out;
+    transition: color .5s ease-out;
+    -webkit-transition: scale .5s ease-out;
+    -moz-transition: scale .5s ease-out;
+    -o-transition: scale .5s ease-out;
+    transition: scale .5s ease-out;
+}
+.metaverse-go:hover{
+    color: var(--color3);
+    scale: .9;
 }
 @media (orientation: portrait) {
     .metaverse-hello{
@@ -311,7 +338,7 @@ container
 .container-thumb:hover{
     border: 0;
     scale: 1.2;
-    box-shadow: 0px 50px 80px -30px rgba(151, 109, 0, 1) !important;
+    box-shadow: 0px 50px 80px -30px var(--color3) !important;
 }
 .container-client{
     text-align: center;
