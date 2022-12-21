@@ -94,15 +94,15 @@
             <script>
                 $.get('memory/news.xml', function(xmlDoc){
                     var $xml = $(xmlDoc);
-                     $xml.find('offer').shuffle().each(function(){
-                        var skuTv    = $(this).find('sku').text();
-                        var titleTv  = $(this).find('offerName').text();
-                        var linkTv   = $(this).find('offerLink').text();
-                        var thumbTv  = $(this).find('offerThumbnail').text();
-                        var priceTv  = $(this).find('priceTo').text();
-                        var clientTv = $(this).find('sellerThumbnail').text();
+                    $xml.find('offer').shuffle().each(function(){
+                        var sku    = $(this).find('sku').text();
+                        var title  = $(this).find('offerName').text();
+                        var link   = $(this).find('offerLink').text();
+                        var thumb  = $(this).find('offerThumbnail').text();
+                        var price  = $(this).find('priceTo').text();
+                        var client = $(this).find('sellerThumbnail').text();
 
-                        $("#container-tv").append("<li><a data-fancybox href='" + thumbTv + "'><style>.container-thumb" + skuTv + "{ background-image:url("+ thumbTv +"); }</style><div class='container-thumb" + skuTv + " container-thumb'></div></a><p class='container-title'>" + titleTv + "</p><p class='container-price'>R$ " + priceTv + "</p><hr><a class='button' href='" + linkTv + "' target='_blank'>saiba mais</a> <div class='container-client'><p class='digital-font'>vendido e entregue por</p><img src='"+ clientTv +"'/></div></li>");
+                        $("#container-tv").append("<li><a href='" + link + "' target='_blank'><style>.container-thumb" + sku + "{ background-image:url("+ thumb +"); }</style><div class='container-thumb" + sku + " container-thumb'></div></a><p class='container-title'>" + title + "</p><p class='container-price'>R$ " + price + "</p><hr><a data-fancybox href='" + thumb + "' class='button negative'><i class='ph-magnifying-glass-plus'></i></a><div class='button-space'></div><a class='button' href='" + link + "' target='_blank'>saiba mais</a> <div class='container-client'><p class='digital-font'>vendido e entregue por</p><img src='"+ client +"'/></div></li>");
                     });
                 },'xml')
             </script>

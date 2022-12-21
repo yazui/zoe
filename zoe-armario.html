@@ -74,7 +74,7 @@
         <!-- content -->
         <section id="content">
             <div class="logo">
-                <img src="brain/logo.png">
+                <a href="index.html"><img src="brain/logo.png"></a>
             </div>
             <div class="has-text-centered" id="news">
                 <i class="ph-columns-light supericon color3"></i>
@@ -97,7 +97,7 @@
                         var price  = $(this).find('priceTo').text();
                         var client = $(this).find('sellerThumbnail').text();
 
-                        $("#container-tv").append("<li><a data-fancybox href='" + thumb + "'><style>.container-thumb" + sku + "{ background-image:url("+ thumb +"); }</style><div class='container-thumb" + sku + " container-thumb'></div></a><p class='container-title'>" + title + "</p><p class='container-price'>R$ " + price + "</p><hr><a class='button' href='" + link + "' target='_blank'>saiba mais</a> <div class='container-client'><p class='digital-font'>vendido e entregue por</p><img src='"+ client +"'/></div></li>");
+                        $("#container-tv").append("<li><a href='" + link + "' target='_blank'><style>.container-thumb" + sku + "{ background-image:url("+ thumb +"); }</style><div class='container-thumb" + sku + " container-thumb'></div></a><p class='container-title'>" + title + "</p><p class='container-price'>R$ " + price + "</p><hr><a data-fancybox href='" + thumb + "' class='button negative'><i class='ph-magnifying-glass-plus'></i></a><div class='button-space'></div><a class='button' href='" + link + "' target='_blank'>saiba mais</a> <div class='container-client'><p class='digital-font'>vendido e entregue por</p><img src='"+ client +"'/></div></li>");
                     });
                 },'xml')
             </script>
