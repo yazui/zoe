@@ -89,7 +89,7 @@
             <script>
                 $.get('memory/smart-tv.xml', function(xmlDoc){
                     var $xml = $(xmlDoc);
-                     $xml.find('offer').shuffle().each(function(){
+                    $xml.find('offer').shuffle().each(function(){
                         var sku    = $(this).find('sku').text();
                         var title  = $(this).find('offerName').text();
                         var link   = $(this).find('offerLink').text();
